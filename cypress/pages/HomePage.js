@@ -1,6 +1,6 @@
 /// <reference types='cypress'/>
 
-let element = {
+let elements = {
   pageHeading: ".heading",
   pageSubHeading: "#content > h2",
   ABTesting: "A/B Testing",
@@ -39,14 +39,20 @@ class HomePage {
   }
 
   validateHeading(value) {
-    cy.get(element.pageHeading).should("have.text", value);
+    cy.get(elements.pageHeading).should("have.text", value);
   }
   validateSubHeading(value) {
-    cy.get(element.pageSubHeading).should("have.text", value);
+    cy.get(elements.pageSubHeading).should("have.text", value);
   }
 
   clickABTesting() {
-    cy.contains(element.ABTesting).click({ force: true });
+    cy.contains(elements.ABTesting).click({ force: true });
+  }
+  clickAddRemove() {
+    cy.contains(elements.addRemoveElements).click({ force: true });
+  }
+  clickBasicAuth() {
+    cy.contains(elements.basicAuth).click({ force: true });
   }
 }
 

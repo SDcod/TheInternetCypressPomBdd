@@ -5,7 +5,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       on("file:preprocessor", cucumber());
     },
-    specPattern: "cypress/e2e/*.feature",
+    specPattern: ["cypress/e2e/*.feature", "cypress/e2e/*.spec.cy.js"],
     baseUrl: "https://the-internet.herokuapp.com/",
   },
 });
