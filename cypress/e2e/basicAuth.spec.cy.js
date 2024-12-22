@@ -20,7 +20,7 @@ describe("basicAuth Scenario", () => {
     //   "Congratulations! You must have the proper credentials."
     // ).should("be.visible");
 
-    //by cy.request
+    //*************by cy.request
     cy.request({
       method: "GET",
       url: "https://the-internet.herokuapp.com/basic_auth",
@@ -33,4 +33,7 @@ describe("basicAuth Scenario", () => {
       HomePage.clickBasicAuth();
     });
   });
+  cy.contains("Congratulations! You must have the proper credentials.").should(
+    "be.visible"
+  );
 });

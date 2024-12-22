@@ -36,23 +36,37 @@ let elements = {
 class HomePage {
   visitHomePage() {
     cy.visit("/");
+    return this;
   }
 
   validateHeading(value) {
     cy.get(elements.pageHeading).should("have.text", value);
+    return this;
   }
   validateSubHeading(value) {
     cy.get(elements.pageSubHeading).should("have.text", value);
+    return this;
   }
 
   clickABTesting() {
     cy.contains(elements.ABTesting).click({ force: true });
+    return this;
   }
   clickAddRemove() {
     cy.contains(elements.addRemoveElements).click({ force: true });
+    return this;
   }
   clickBasicAuth() {
     cy.contains(elements.basicAuth).click({ force: true });
+    return this;
+  }
+  clickCheckBoxes() {
+    cy.contains(elements.checkboxes).click({ force: true });
+    return this;
+  }
+  clickContextMenu() {
+    cy.contains(elements.contexMenu).click({ force: true });
+    return this;
   }
 }
 
