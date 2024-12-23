@@ -10,7 +10,7 @@ let elements = {
   checkboxes: "Checkboxes",
   contexMenu: "Context Menu",
   dragAndDrop: "Drag and Drop",
-  dropdown: "href='/dropdown'",
+  dropdown: "[href='/dropdown']",
   dynamicLoading: "Dynamic Loading",
   fileDownload: "File Download",
   fileUpload: "File Upload",
@@ -66,6 +66,14 @@ class HomePage {
   }
   clickContextMenu() {
     cy.contains(elements.contexMenu).click({ force: true });
+    return this;
+  }
+  clickDragAndDrop() {
+    cy.contains(elements.dragAndDrop).click({ force: true });
+    return this;
+  }
+  clickDropdown() {
+    cy.get(elements.dropdown).click({ force: true });
     return this;
   }
 }
