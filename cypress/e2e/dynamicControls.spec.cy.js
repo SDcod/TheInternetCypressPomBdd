@@ -10,5 +10,8 @@ describe("Dynamic Controls", () => {
     DynamicControls.verifyPageTitle().shouldCheckBoxVisible(true);
     DynamicControls.clickRemoveBtn();
     DynamicControls.shouldCheckBoxVisible(false);
+    DynamicControls.validateCheckBoxMessage("It's gone!");
+    DynamicControls.clickAddBtn().validateCheckBoxMessage("It's back!");
+    DynamicControls.validateAddedCheckbox();
   });
 });

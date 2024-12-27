@@ -36,6 +36,10 @@ class DynamicControls {
     cy.get(elements.addButton).should("exist").click({ force: true });
     return this;
   }
+
+  validateAddedCheckbox() {
+    cy.get(elements.checkBoxAfterAdding).should("exist");
+  }
 }
 
 export default new DynamicControls();

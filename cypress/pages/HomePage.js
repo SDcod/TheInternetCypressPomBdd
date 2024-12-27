@@ -80,6 +80,9 @@ class HomePage {
   clickDynamicControls() {
     cy.contains(elements.dynamicControls).click({ force: true });
   }
+  clidkDynamicLoading() {
+    cy.contains(elements.dynamicLoading).click({ force: true });
+  }
 }
 
 export default new HomePage();
