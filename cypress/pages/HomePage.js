@@ -11,6 +11,7 @@ let elements = {
   contexMenu: "Context Menu",
   dragAndDrop: "Drag and Drop",
   dropdown: "[href='/dropdown']",
+  dynamicControls: "Dynamic Controls",
   dynamicLoading: "Dynamic Loading",
   fileDownload: "File Download",
   fileUpload: "File Upload",
@@ -76,18 +77,9 @@ class HomePage {
     cy.get(elements.dropdown).click({ force: true });
     return this;
   }
+  clickDynamicControls() {
+    cy.contains(elements.dynamicControls).click({ force: true });
+  }
 }
-
-//might be helpful for drag and drop
-// Cypress.Commands.add("dragTo", { prevSubject: "element" }, (subject, targetEl) => {
-//     const dataTransfer = new DataTransfer();
-//     cy.get(subject).trigger('dragstart',{
-//        dataTransfer
-//       });
-//     cy.get(targetEl).trigger('drop',{
-//          dataTransfer
-//     })
-//   }
-// );
 
 export default new HomePage();
